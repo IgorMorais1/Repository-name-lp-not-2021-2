@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-     let num1 = Number(prompt('Informe um número: '))
+     let num1 = parseInt(prompt('Informe um número inteiro: '))
      
-     if (num1 / 2 === 0) {
-        alert('Este número é par!')
+     // parseInt(): *TENTA* converter uma string em um número INTEIRO
+     
+     if(isNaN(num1)) {
+        alert('ERRO: o valor informado não é um número inteiro!')
      }
-     else if (num1 / 2 !== 0) {
-        alert('Este número é impar!') 
+     
+     else if (num1 % 2 === 0) {
+        alert('O número (' + num1 + ') é par!') 
      }
 
+     else {
+        alert('O número (' + num1 + ') é impar')
+     }
 
     </script>
 </head>
