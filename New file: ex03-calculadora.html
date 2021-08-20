@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        let num1 = parseInt(prompt('Informe o primeiro número: '))
+        
+        if(isNaN(num1)){
+            alert('ERRO! O valor informado não é um número!')
+        }
+        
+        let num2 = parseInt(prompt('Informe o segundo número: '))
+        
+        if(isNaN(num2)){
+            alert('ERRO! O valor informado não é um número!')
+        }
+        
+        alert('Escolha um operador entre esses: + , - , x , X, *, /') 
+       
+         let op = (prompt('Informe o operador: '))
+
+
+         if (op === '+'){
+           soma = num1 + num2
+           alert('O resultado da soma dos números: (' + soma + ')') 
+        }           
+           
+          else if (op === '-'){
+            sub = num1 - num2
+            alert('O resultado da subtração dos números: (' + sub +')')
+           }
+
+           else if(op === 'x' || op === "X" || op === '*'){
+            mult = num1 * num2
+            alert('O resultado da multiplicação dos números: ('+ mult +')') 
+           }
+
+          else if(op === '/') {
+            div = num1 / num2
+            alert('O resultado da divisão dos números: ('+ div +')')   
+           }
+              
+           
+           
+           
+              
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
