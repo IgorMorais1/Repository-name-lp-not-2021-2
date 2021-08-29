@@ -36,7 +36,7 @@
          
 
           do{
-              num = (prompt('Informe o segundo dígito placa de 0 a 9'))
+              num = (prompt('Informe o segundo dígito da placa de 0 a 9'))
 
               switch (num){
                 case '0':
@@ -81,7 +81,7 @@
                    
               }
 
-          } while (isNaN(num) || num >= 9)
+          } while (isNaN(num) || (num) <= 9)
               
           if(result !== undefined) {
             document.write(`A conversão do ${num} é igual a ${result}`)
