@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,34 +31,63 @@
 
         */
 
-          let num, result
+          let num
+          let result 
+         
 
           do{
-              num = parseInt(prompt('Informe o segundo dígito placa de 0 a 9'))
+              num = (prompt('Informe o segundo dígito placa de 0 a 9'))
 
               switch (num){
                 case '0':
-                  result = 'A'
+                  result = 'A' 
                 break
-
+                
                 case '1':
-                    
+                  result = 'B'  
+                break
+                
+                case '2':
+                  result = 'C'
                 break
 
+                case '3':
+                  result = 'D'
+                break
 
+                case '4': 
+                  result = 'E'
+                break
 
+                case '5':
+                  result = 'F'
+                break
 
+                case '6':
+                  result = 'G'
+                break
 
+                case '7':
+                  result = 'H'
+                break
+
+                case '8':
+                  result = 'I'
+                break
+
+                case '9':
+                  result = 'J'
+                break
+                   
               }
-    
-              alert('A conversão do ' + num + ' é ' + result +' ')
 
-          } while (isNaN(num))
+          } while (isNaN(num) || num >= 9)
               
+          if(result !== undefined) {
+            document.write(`A conversão do ${num} é igual a ${result}`)
+          }
           
-              
-          
-
+        
 
     </script>
 </head>
