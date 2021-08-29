@@ -31,10 +31,27 @@
 
         */
 
-          let num
+          let num, result
 
           do{
-              num = parseInt(prompt('Informe o segundo dígito placa (Númerico)'))
+              num = parseInt(prompt('Informe o segundo dígito placa de 0 a 9'))
+
+              switch (num){
+                case '0':
+                  result = 'A'
+                break
+
+                case '1':
+                    
+                break
+
+
+
+
+
+              }
+    
+              alert('A conversão do ' + num + ' é ' + result +' ')
 
           } while (isNaN(num))
               
