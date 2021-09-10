@@ -7,24 +7,35 @@
     <title>Document</title>
     <script>
        
-       let num1, num2
+       let num1, num2, maior , menor , soma = 0
 
 
        do{
-        num1 = parseInt(prompt('Informe o primeiro número inteiro: '))
-        num2 = parseInt(prompt('Insira o segundo número inteiro: '))
+        num1 = parseInt(prompt('Informe o primeiro número: '))
+       } while (isNaN(num1))
+      
+       do{
+        num2 = parseInt(prompt('Insira o segundo número, diferente do primeiro: '))
+        } while (isNaN(num2) || num2 === num1)
+        
 
-        } while (isNaN(num1) || isNaN(num2))
-       
-        if (num1 < num2) { 
-        for(let i = num1; i > num2; num1++)
-            document.write(i + '<br>')
+        // determinando qual dos números é maior e menor
+        if(num1 > num2){
+            maior = num1
+            menor = num2
         }
 
-        if(num2 > num1){
-            for(let i = num2; i > num1; num2++)
-            document.write(i + '<br>')
+        else{
+            maior = num2 
+            menor = num1
         }
+
+        //Calculando a soma
+        for(let i = menor; i <= maior; i++){
+            soma += i 
+        }
+
+        alert(`A soma dos números entre ${menor} e ${maior} é ${soma}.`)
 
     </script>
 </head>
