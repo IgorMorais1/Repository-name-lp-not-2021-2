@@ -10,11 +10,11 @@
 <body>
     <h1>Document Objetct Model (DOM)</h1>
 
-    <ol>
-        <li>São Paulo</li>
-        <li>Minas Gerais</li>
-        <li>Rio de Janeiro</li>
-        <li>Espírito Santo</li>
+    <ol id = "estados"> 
+        <li id = "sp">São Paulo</li>
+        <li id = "mg">Minas Gerais</li>
+        <li id = "rj">Rio de Janeiro</li>
+        <li id = "es">Espírito Santo</li>
     </ol>
 
     <script>
@@ -24,6 +24,8 @@
         // variável JavaScript
 
         let titulo1 = document.querySelector('h1')
+
+        
 
         // 2) Alterar o conteúdo textual do elemento 
         titulo1.textContent = 'Estados da Região Sudeste'
@@ -38,6 +40,19 @@
 
         itens[2].style.color ='blue'
 
+        // Capturando um elemento pelo id - existem duas formas
+        
+        let itemMg = document.getElementById('#mg') // Forma clássica
+        itemMg.style.color = 'green' 
+
+        // Forma moderna - note que é nessário colocar o # antes do id
+        let itemEs = document.querySelector('#es')
+        itemEs.style.fontWeight = 'bold'
+
+        let listaOrd = document.querySelector('#estados')
+        
+        // Muda o amrcador da lista para letras maiúsculas
+        listaOrd.style.listStyle = 'upper-alpha'
 
 
     </script>
