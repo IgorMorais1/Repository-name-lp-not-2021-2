@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+    <style>
+        * {
+            font-family: Calibri, Arial, sans;
+        }
+
+
+    </style>
+</head>
+<body>
+     <h1> Calculadora DOM</h1>
+
+     <div>
+        <label for="num1">Primeiro número</label>
+        <input  id="num1" type="Number">
+    <div>
+        <label for="oper"> Operação </label>
+        <select  id="oper">
+            <option>(Selecione)</option>
+            <option> Soma(+) </option>
+            <option> Subtração(-) </option>
+            <option> Multiplicação(*) </option>
+            <option> Divisão(/) </option>
+        </select>
+
+        <div>
+            <label for="num2">Segundo número</label>
+            <input id="num2" type="Number">
+        </div>
+  
+    </div>
+    
+    <button id="calc"> Calcular </button>
+
+     </div>
+     
+     <script>
+
+        const primeiroNumero = document.querySelector('#num1')
+        const operacao = document.querySelector('#oper')
+        const segundoNumero = document.querySelector('#num2')
+        const calcular = document.getElementById('calc')
+     
+       
+ let num1, num2
+        
+        function validar() {
+           
+            if(num1 == ""){
+                alert("Insira um número")
+                primeiroNumero.focus()
+            return false  
+            }
+
+            if(num2 == ""){
+                alert("Insira um número")
+                segundoNumero.focus()
+            return false
+            }
+        
+            return true
+        }
+       
+       
+       let result
+        function calculadora(){
+        
+        num1 = Number(primeiroNumero.value)
+        num2 = Number(segundoNumero.value)
+
+        if(validar()){
+
+        switch(operacao.selectedIndex) {
+           
+            case 1:
+              result = num1 + num2
+              alert('O resultado da soma foi: '+ result +' ') 
+              break;
+        
+            case 2:
+                result = num1 - num2
+                alert(`O resultado da subtração foi: ${result}`)
+                break;
+            
+            case 3:
+                result = num1 * num2
+                alert(`O resultado da multiplicação foi: ${result}`)
+                break;
+            
+            case 4:
+                result = num1 / num2
+                alert(`O resultado da divisão foi: ${result}`)
+                break;            
+           }
+
+         }
+           
+        }         
+
+        calcular.addEventListener('click', calculadora)
+            
+        
+        
+
+     </script>
+
+
+</body>
+</html>
