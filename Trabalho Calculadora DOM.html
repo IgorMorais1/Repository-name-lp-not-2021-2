@@ -58,6 +58,11 @@
             return false  
             }
 
+            if(oper.selectedIndex <= 0){
+                alert("Selecione uma operação")
+                return false
+            }
+
             if(num2 == ""){
                 alert("Insira um número")
                 segundoNumero.focus()
