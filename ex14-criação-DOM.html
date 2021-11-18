@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Criação de novos elementos</h1>
+
+    <ol>
+        
+    </ol>
+
+    <script>
+
+        /*
+        1) Insira três itens na lista ordenada, com os valores "Belarmina", 
+               "Luzinete" e "Roberval".
+        */
+
+        const lista = document.querySelector('ol')
+
+        const belarmina = document.createElement('li')
+        belarmina.textContent = 'Belarmina'
+        lista.appendChild(belarmina)
+   
+        const luzinete = document.createElement('li')
+        luzinete.textContent = 'Luzinete'
+        lista.appendChild(luzinete)
+
+        const roberval = document.createElement('li')
+        roberval.textContent = 'Roberval'
+        lista.appendChild(roberval)
+
+        /*
+        2) Insira na lista os itens "Adamastor", "Ildefonso"
+"Querência" e "Turíbio, mantendo a ordem alfabética"
+        */
+
+        const adamastor = document.createElement('li')
+        adamastor.textContent = 'Adamastor'
+        lista.prepend(adamastor)
+
+        const ildefonso = document.createElement('li')
+        ildefonso.textContent = 'Ildefonso'
+        lista.insertBefore(ildefonso, luzinete)
+
+        const querencia = document.createElement('li')
+        querencia.textContent = 'Querência'
+        lista.insertBefore(querencia, roberval)
+
+        const turibio = document.createElement('li')
+        turibio.textContent = 'Turíbio'
+        lista.appendChild(turibio)
+
+        /*
+        3) Insira um título de nível 2 logo abaixop do títtulo de nível 1, 
+        com o texto "Lista de candidatos"
+        */
+
+        const titulo2 = document.createElement('h2')
+        titulo2.textContent = 'Lista de candidatos'
+        document.body.insertBefore(titulo2, lista)
+
+        /* 4) Insira um parágrafo abaixo da lista ordenada, com o texto 
+        "Irão para o segundo turno os dois candidatos mais votados."
+        */
+
+        const parag = document.createElement('p')
+        parag.textContent = 'Irão para o segundo turno os dois candidatos mais votados.'
+        document.body.appendChild(parag)
+
+        
+
+   </script>
+</body>
+</html>
